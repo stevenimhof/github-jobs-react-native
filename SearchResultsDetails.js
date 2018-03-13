@@ -14,7 +14,9 @@ export default class SearchResultsDetails extends Component {
         const item = this.props.item;
         console.log(this.props.item.title);
         return (
-            <ScrollView style={styles.container}>
+            <ScrollView
+                style={styles.container}
+                contentContainerStyle={styles.contentContainer}>
                 <Text style={styles.title}>
                 {item.title}
                 </Text>
@@ -40,17 +42,17 @@ export default class SearchResultsDetails extends Component {
 }
 
 const styles = StyleSheet.create({
+    contentContainer: {
+        paddingHorizontal: 20,
+        paddingVertical: 20
+    },
     container: {
         flex: 1,
         flexDirection: 'column',
         backgroundColor: '#ecf0f1',
-        paddingTop: 80,
-        paddingLeft: 20,
-        paddingRight: 20,
-        paddingBottom:20,
     },
     title: {
-        fontSize: 18,
+        fontSize: 20,
         fontWeight: 'bold',
         paddingBottom:20
     },
@@ -60,7 +62,7 @@ const styles = StyleSheet.create({
         paddingBottom:20
     },
     desc: {
-        paddingTop:40,
+        paddingTop:20,
         fontWeight: 'bold'
     }
   });

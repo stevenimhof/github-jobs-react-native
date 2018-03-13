@@ -95,12 +95,14 @@ export default class SearchPage extends Component {
                 <TouchableHighlight
                     style={styles.button}
                     onPress={this._onSearchPressed}
+                    underlayColor='#888'
                 >
                     <Text>Search</Text>
                 </TouchableHighlight>
                 <TouchableHighlight
                     style={styles.button}
                     onPress={this._onResetPressed}
+                    underlayColor='#888'
                 >
                     <Text>Reset</Text>
                 </TouchableHighlight>
