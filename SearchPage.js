@@ -61,9 +61,9 @@ export default class SearchPage extends Component {
             this.setState({ message: 'No data found.'});
         }
     };
-    
+
     _onSearchPressed = () => {
-        const query = `https://crossorigin.me/https://jobs.github.com/positions.json?description=${this.state.job}&location=${this.state.location}`;
+        const query = `https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?description=${this.state.job}&location=${this.state.location}`;
         this._executeQuery(query);
     };
 
